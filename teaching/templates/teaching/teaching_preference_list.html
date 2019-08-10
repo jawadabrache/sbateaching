@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>SBA Teaching Preferences</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body>
+
+    	<div class="page-header">
+            <h1><a href="/">SBA Teaching Preferences</a></h1>
+        </div>
+
+		{% for teaching_preference in teaching_preferences %}
+    	<div class="post">
+        	<p>{{ teaching_preference.faculty }}'s preference for {{ teaching_preference.course.identif }} = {{ teaching_preference.preference}} - id course: {{ teaching_preference.course.id }}, id faculty: {{ teaching_preference.faculty.id }} </p>
+    	</div>
+		{% endfor %}
+
+	</body>
+</html>

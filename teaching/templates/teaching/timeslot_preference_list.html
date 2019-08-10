@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <title>SBA Timeslot Preferences</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body>
+
+    	<div class="page-header">
+            <h1><a href="/">SBA Timeslot Preferences</a></h1>
+        </div>
+
+		{% for timeslot_preference in timeslot_preferences %}
+    	<div class="post">
+        	<p>{{ timeslot_preference.faculty }}'s preference for {{ timeslot_preference.ts.identif }} = {{ timeslot_preference.preference}} </p>
+    	</div>
+		{% endfor %}
+
+	</body>
+</html>

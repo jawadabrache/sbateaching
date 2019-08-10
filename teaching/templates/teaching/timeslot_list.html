@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+    <head>
+        <title>SBA Available Timeslots</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">SBA Available Timeslots</a></h1>
+        </div>
+
+	{% for timeslot in timeslots %}
+    	<div class="post">
+        	<p>{{ timeslot.identif }}</p>
+    	</div>
+	{% endfor %}
+
+    </body>
+</html>

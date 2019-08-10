@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+        <title>SBA Teaching Assignment</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body>
+
+    	<div class="page-header">
+            <h1><a href="/">SBA Teaching Assignment</a></h1>
+        </div>
+
+		<div>
+            <h2><a href="/">Section Assignment</a></h2>
+        </div>
+
+		{% for message in course_assignment_messages %}
+    	<div class="post">
+        			<p>{{ message }} </p>
+		</div>
+		{% endfor %}
+
+		<div>
+            <h2><a href="/">Timeslot Assignment</a></h2>
+        </div>
+
+		{% for message in timeslot_assignment_messages %}
+    	<div class="post">
+        			<p>{{ message }} </p>
+		</div>
+		{% endfor %}
+		
+	</body>
+</html>
